@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://c54ktgrvaw0kb"]
+
+[ext_resource type="Script" path="res://script/opening_scene.gd" id="1_63d0a"]
+[ext_resource type="Texture2D" uid="uid://bp65k4ufusdbv" path="res://asset/MAIN.png" id="2_a5m3s"]
+
+[sub_resource type="Theme" id="Theme_vtflr"]
+
+[node name="OpeningScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_63d0a")
+
+[node name="Main" type="Sprite2D" parent="."]
+position = Vector2(602.438, 365)
+scale = Vector2(0.761789, 0.714844)
+texture = ExtResource("2_a5m3s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(621, 364)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 596.0
+offset_right = 653.0
+offset_bottom = 654.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+text = "The Last Knight's Gambit"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = SubResource("Theme_vtflr")
+text = "Start Game"
+icon_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]

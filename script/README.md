@@ -1,0 +1,1 @@
+Create scripts like player, enemy, door.

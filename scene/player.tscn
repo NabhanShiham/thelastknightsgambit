@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsmbgnf7dif6y"]
+
+[ext_resource type="Script" path="res://script/player.gd" id="1_vtttm"]
+[ext_resource type="Texture2D" uid="uid://7l1wwhelmyg5" path="res://spellun-sprite.webp" id="2_ebk0b"]
+[ext_resource type="Texture2D" uid="uid://dcchc8pte72r7" path="res://walkknight.webp" id="3_prxdg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_im5wh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rgkp4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ebk0b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_prxdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ebk0b")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_vtttm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_im5wh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2.38419e-07)
+scale = Vector2(0.23487, 0.285385)
+sprite_frames = SubResource("SpriteFrames_rgkp4")
+animation = &"run"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(27, 0)

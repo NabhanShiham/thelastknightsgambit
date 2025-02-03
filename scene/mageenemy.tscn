@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1hmnni2qqnfm"]
+
+[ext_resource type="Script" path="res://script/mageenemy.gd" id="2_2bwy0"]
+[ext_resource type="Texture2D" uid="uid://dbfcmgfq12kcc" path="res://asset/mage/tile000.png" id="2_w45ln"]
+[ext_resource type="Texture2D" uid="uid://6krv12sjovn0" path="res://asset/mage/tile018.png" id="3_q32tt"]
+[ext_resource type="Texture2D" uid="uid://cax0ai2sfq552" path="res://asset/mage/tile012.png" id="4_eee3h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ed71k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7g02v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w45ln")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_q32tt")
+}],
+"loop": true,
+"name": &"walkLeft",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_eee3h")
+}],
+"loop": true,
+"name": &"walkRight",
+"speed": 1.0
+}]
+
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("attack_ray")]
+show_behind_parent = true
+z_index = 1
+script = ExtResource("2_2bwy0")
+attack_ray = NodePath("RayCast2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -21)
+shape = SubResource("CapsuleShape2D_ed71k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -20)
+scale = Vector2(0.952381, 0.93019)
+sprite_frames = SubResource("SpriteFrames_7g02v")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(1.36424e-12, -21)
+target_position = Vector2(-34, 0)

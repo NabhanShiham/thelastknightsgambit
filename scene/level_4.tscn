@@ -1,0 +1,264 @@
+[gd_scene load_steps=20 format=3 uid="uid://l0v2hsv6rk5u"]
+
+[ext_resource type="Texture2D" uid="uid://c0j1chtn7r3kk" path="res://asset/BOSSBACKGROUUUN.png" id="1_qktna"]
+[ext_resource type="Texture2D" uid="uid://bgjv484xco3bv" path="res://PLAT2.webp" id="2_3ncmn"]
+[ext_resource type="PackedScene" uid="uid://dsmbgnf7dif6y" path="res://scene/player.tscn" id="3_ya1mo"]
+[ext_resource type="PackedScene" uid="uid://d1hmnni2qqnfm" path="res://scene/mageenemy.tscn" id="4_4e71m"]
+[ext_resource type="Texture2D" uid="uid://d2vqeorhifu5d" path="res://asset/BAR.png" id="4_po04j"]
+[ext_resource type="Texture2D" uid="uid://di5l5tv2uli4d" path="res://asset/hearts/H1.png" id="5_rwo4r"]
+[ext_resource type="Texture2D" uid="uid://icwkpydiaw37" path="res://asset/hearts/H2.png" id="6_7lpl7"]
+[ext_resource type="Texture2D" uid="uid://b2efw6j75bwy1" path="res://asset/hearts/H3.png" id="7_gxnr2"]
+[ext_resource type="Texture2D" uid="uid://bgxpu148cfyuc" path="res://asset/hearts/H4.png" id="8_j4yj6"]
+[ext_resource type="Texture2D" uid="uid://hn6n2y4j23sp" path="res://asset/hearts/H5.png" id="9_s17oi"]
+[ext_resource type="Texture2D" uid="uid://c1q4una6vv62d" path="res://asset/hearts/H6.png" id="10_kvdtu"]
+[ext_resource type="Texture2D" uid="uid://bpm0me0ajb2xl" path="res://asset/hearts/H7.png" id="11_7l8x2"]
+[ext_resource type="Texture2D" uid="uid://v5jyrcxvofxa" path="res://asset/hearts/H8.png" id="12_1wb6v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewveb"]
+size = Vector2(4770.34, 406.139)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ov1fm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rwo4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7lpl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gxnr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j4yj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s17oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kvdtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7l8x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1wb6v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dpk05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rwo4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7lpl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gxnr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j4yj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s17oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kvdtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7l8x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1wb6v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2g2a6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rwo4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7lpl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gxnr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j4yj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s17oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kvdtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7l8x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1wb6v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_myabi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rwo4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7lpl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gxnr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j4yj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s17oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kvdtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7l8x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1wb6v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h6me8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rwo4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7lpl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gxnr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j4yj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s17oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kvdtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7l8x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1wb6v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bossbackgrouuun" type="Sprite2D" parent="."]
+position = Vector2(638, 434)
+texture = ExtResource("1_qktna")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(232.432, 133)
+scale = Vector2(0.275093, 0.447826)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1481.56, 1328.64)
+scale = Vector2(3.29451, 2.62136)
+texture = ExtResource("2_3ncmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1474.29, 1339.8)
+shape = SubResource("RectangleShape2D_ewveb")
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_ya1mo")]
+position = Vector2(265, 615)
+scale = Vector2(0.981024, 1.06796)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D2"]
+position = Vector2(-2.03868, 0.936288)
+zoom = Vector2(3, 3)
+
+[node name="Bar" type="Sprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-200.301, -95.5092)
+scale = Vector2(0.0764507, 0.0676263)
+texture = ExtResource("4_po04j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-173.288, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_ov1fm")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-155.959, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_dpk05")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-139.65, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_2g2a6")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-123.34, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_myabi")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-106.012, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_h6me8")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Label" type="Label" parent="CharacterBody2D2/Camera2D"]
+offset_left = -30.5803
+offset_top = -106.745
+offset_right = 23.4197
+offset_bottom = -83.7455
+text = "Boss Level!"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_4e71m")]
+position = Vector2(423, 627)
+
+[node name="Enemy" parent="." instance=ExtResource("4_4e71m")]
+position = Vector2(496, 624)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_4e71m")]
+position = Vector2(581, 618)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_4e71m")]
+position = Vector2(640, 618)

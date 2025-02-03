@@ -1,0 +1,1 @@
+Create seperate folders like model, texture, audio for your various assets.

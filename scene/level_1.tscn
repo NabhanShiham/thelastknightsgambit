@@ -1,0 +1,128 @@
+[gd_scene load_steps=16 format=3 uid="uid://b6jlqc4duuxw"]
+
+[ext_resource type="Texture2D" uid="uid://l2ud4f2jefdl" path="res://asset/background_layer_1.png" id="1_m4dht"]
+[ext_resource type="PackedScene" uid="uid://dsmbgnf7dif6y" path="res://scene/player.tscn" id="2_ailrr"]
+[ext_resource type="Texture2D" uid="uid://bgjv484xco3bv" path="res://PLAT2.webp" id="3_74bq7"]
+[ext_resource type="Texture2D" uid="uid://d2vqeorhifu5d" path="res://asset/BAR.png" id="4_g84kd"]
+[ext_resource type="PackedScene" uid="uid://d1hmnni2qqnfm" path="res://scene/mageenemy.tscn" id="4_sssb1"]
+[ext_resource type="Texture2D" uid="uid://di5l5tv2uli4d" path="res://asset/hearts/H1.png" id="5_m47fr"]
+[ext_resource type="Texture2D" uid="uid://icwkpydiaw37" path="res://asset/hearts/H2.png" id="6_4gwlt"]
+[ext_resource type="Texture2D" uid="uid://b2efw6j75bwy1" path="res://asset/hearts/H3.png" id="7_rvk6s"]
+[ext_resource type="Texture2D" uid="uid://bgxpu148cfyuc" path="res://asset/hearts/H4.png" id="8_bja27"]
+[ext_resource type="Texture2D" uid="uid://hn6n2y4j23sp" path="res://asset/hearts/H5.png" id="9_ihyev"]
+[ext_resource type="Texture2D" uid="uid://c1q4una6vv62d" path="res://asset/hearts/H6.png" id="10_g6b1x"]
+[ext_resource type="Texture2D" uid="uid://bpm0me0ajb2xl" path="res://asset/hearts/H7.png" id="11_6doeb"]
+[ext_resource type="Texture2D" uid="uid://v5jyrcxvofxa" path="res://asset/hearts/H8.png" id="12_jr8mk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewveb"]
+size = Vector2(4770.34, 406.139)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lbs8d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_m47fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4gwlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rvk6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bja27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ihyev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g6b1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6doeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jr8mk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="."]
+position = Vector2(670, 401)
+scale = Vector2(5.27195, 5.56662)
+texture = ExtResource("1_m4dht")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(232.432, 133)
+scale = Vector2(0.275093, 0.447826)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1481.56, 1328.64)
+scale = Vector2(3.29451, 2.62136)
+texture = ExtResource("3_74bq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1474.29, 1339.8)
+shape = SubResource("RectangleShape2D_ewveb")
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_ailrr")]
+position = Vector2(265, 615)
+scale = Vector2(0.981024, 1.06796)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D2"]
+position = Vector2(-2.03868, 0.936288)
+zoom = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="CharacterBody2D2/Camera2D"]
+offset_left = -30.5803
+offset_top = -106.745
+offset_right = 23.4197
+offset_bottom = -83.7455
+text = "Level 1"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-173.288, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_lbs8d")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Bar" type="Sprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-200.301, -95.5092)
+scale = Vector2(0.0764507, 0.0676263)
+texture = ExtResource("4_g84kd")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-155.959, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_lbs8d")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-139.65, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_lbs8d")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-123.34, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_lbs8d")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="CharacterBody2D2/Camera2D"]
+position = Vector2(-106.012, -95.5092)
+scale = Vector2(0.287293, 0.242685)
+sprite_frames = SubResource("SpriteFrames_lbs8d")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_sssb1")]
+position = Vector2(423, 627)
